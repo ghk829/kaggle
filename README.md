@@ -7,7 +7,8 @@ zillow : 10/2~10/16(2주)
 
 ~8/6 : 6,14장 (Unsupervised Learning)  
 ~8/13 : 9,10장(Optimization)  
-~8/20 : 16장(Bayseian),13,17장(Deeper Models)  - 수정 MCMC제외 
+~8/20 : 13,17장(Deeper Models),Bnlearn  - 수정 MCMC,Graphic Model제외 
+[bnlearn](https://www.r-bloggers.com/bayesian-network-in-r-introduction/)
 
 ~8/27 : CNN,RNN([url](https://hunkim.github.io/ml/))
 cnn : [cnn](https://github.com/smwade/CNN/blob/master/cnn_overview_tensorflow.ipynb)
