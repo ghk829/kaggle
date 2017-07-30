@@ -21,6 +21,8 @@ rnn : [rnn](https://github.com/dennybritz/tf-rnn)
 
 딥러닝 제대로 시작하기
 
+[Deep Learning Repository](https://github.com/ChristosChristofidis/awesome-deep-learning)
+
 # ML : An algorithm 
 [링크](https://github.com/alexsosn/MarslandMLAlgo)
 다운받는 법:
