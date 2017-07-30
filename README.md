@@ -16,4 +16,5 @@ rnn : [rnn](https://github.com/dennybritz/tf-rnn)
 
 # 도서
 알고리즘 중심의 머신러닝 가이드 
+
 딥러닝 제대로 시작하기
