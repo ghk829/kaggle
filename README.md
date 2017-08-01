@@ -22,6 +22,8 @@ rnn : [rnn](https://github.com/dennybritz/tf-rnn)
 딥러닝 제대로 시작하기
 
 [Deep Learning Repository](https://github.com/ChristosChristofidis/awesome-deep-learning)
+# Numpy 연습
+https://github.com/ghk829/numpy-100/blob/master/100%20Numpy%20exercises.ipynb
 
 # ML : An algorithm 
 [링크](https://github.com/alexsosn/MarslandMLAlgo)
