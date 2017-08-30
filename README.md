@@ -39,6 +39,7 @@ git clone https://github.com/alexsosn/MarslandMLAlgo.git
 ### 2.부등식이 있는 최적화(KKT)
 
 # url
+[Advanced R](http://www.listendata.com/p/r-programming-tutorials.html)
 [텐서플로](https://tensorflow.blog/2016/04/28/first-contact-with-tensorflow/)
 
 [딥러닝](http://cs231n.stanford.edu/syllabus.html)
