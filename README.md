@@ -21,6 +21,8 @@ rnn : [rnn](https://github.com/dennybritz/tf-rnn)
 
 딥러닝 제대로 시작하기
 
+Mastering Machine Learning with R
+
 [Deep Learning Repository](https://github.com/ChristosChristofidis/awesome-deep-learning)
 # Numpy 연습
 https://github.com/ghk829/numpy-100/blob/master/100%20Numpy%20exercises.ipynb
@@ -38,4 +40,13 @@ git clone https://github.com/alexsosn/MarslandMLAlgo.git
 
 # url
 [텐서플로](https://tensorflow.blog/2016/04/28/first-contact-with-tensorflow/)
+
 [딥러닝](http://cs231n.stanford.edu/syllabus.html)
+
+[H2O](https://github.com/h2oai/h2o-tutorials)
+
+[dplyr](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
+
+[data.table](http://using.tistory.com/81)
+
+[pandas](https://github.com/ghk829/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb) github clone해도 됨!
