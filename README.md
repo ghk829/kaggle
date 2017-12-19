@@ -51,3 +51,5 @@ git clone https://github.com/alexsosn/MarslandMLAlgo.git
 [data.table](http://using.tistory.com/81)
 
 [pandas](https://github.com/ghk829/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb) github clone해도 됨!
+
+[numerical](http://www.waxworksmath.com/Authors/G_M/Kiusalaas/NMIEW_Python/kiusalaas.html)
