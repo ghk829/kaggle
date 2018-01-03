@@ -3,17 +3,17 @@
 
 ~1/15 : Scientific Computing with Python 3 : CH 4,5,6,7,8,9,10,11
 
-~1/22 : Numerical Methods in Python 3 : CH2, CH3
+~1/22 : Numerical Methods in Python 3 : CH2
 
 ## 스케쥴에 따라... 아직 미확정
 
-~1/29 : Numerical Methods in Python 3 : CH4,CH5
+~1/29 : Numerical Methods in Python 3 : CH3, CH4
 
-~2/5 : Numerical Methods in Python 3 : CH6,CH7 
+~2/5 : Numerical Methods in Python 3 : CH5, CH6 
 
-~2/12 : Numerical Methods in Python 3 : CH8,CH9
+~2/12 : Numerical Methods in Python 3 : CH7, CH8
 
-~2/19 : Numerical Methods in Python 3 : CH10
+~2/19 : Numerical Methods in Python 3 : CH9, CH10
 ## 추후 일정은 기본을 익힌 후에...
 # 도서
 Numerical Methods in Python 3
