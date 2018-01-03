@@ -1,42 +1,16 @@
-# kaggle
-zillow : 10/2~10/16(2주)  
-
 # 공부계획  
-~7/23 : 1,2,3,4,5장 (Linear & Neural)  
-~7/30 : 7,8,12장 (Other Models)  - 질문사항
-
-~8/6 : 6,14장 (Unsupervised Learning)  
-~8/13 : 9,10장(Optimization)  
-~8/20 : 13,17장(Deeper Models),Bnlearn  - 수정 MCMC,Graphic Model제외 
-[bnlearn](https://www.r-bloggers.com/bayesian-network-in-r-introduction/) <- R로 간단하게 베이지안 모델 구현
-
-~8/27 : CNN,RNN([url](https://hunkim.github.io/ml/))
-cnn : [cnn](https://github.com/smwade/CNN/blob/master/cnn_overview_tensorflow.ipynb)
-rnn : [rnn](https://github.com/dennybritz/tf-rnn)  
-이후 R 라이브러리 공유 / 대회 데이터 분석
-아직 괜찮은 대회를 못 찾겠...
-
+~1/8 : Scientific Computing with Python 3 : CH 1,2,3 && Numerical Methods in Python 3 : CH 1
+~1/15 : Scientific Computing with Python 3 : CH 4,5,6,7,8,9,10,11
+~1/22 : Numerical Methods in Python 3 : CH2, CH3
+## 스케쥴에 따라... 아직 미확정
+~1/29 : Numerical Methods in Python 3 : CH4,CH5
+~2/5 : Numerical Methods in Python 3 : CH6,CH7 
+~2/12 : Numerical Methods in Python 3 : CH8,CH9
+~2/19 : Numerical Methods in Python 3 : CH10
+## 추후 일정은 기본을 익힌 후에...
 # 도서
-알고리즘 중심의 머신러닝 가이드 
-
-딥러닝 제대로 시작하기
-
-Mastering Machine Learning with R
-
-[Deep Learning Repository](https://github.com/ChristosChristofidis/awesome-deep-learning)
-# Numpy 연습
-https://github.com/ghk829/numpy-100/blob/master/100%20Numpy%20exercises.ipynb
-
-# ML : An algorithm 
-[링크](https://github.com/alexsosn/MarslandMLAlgo)
-다운받는 법:
-git 접속 후 
-git clone https://github.com/alexsosn/MarslandMLAlgo.git
-파이썬에서 코드 불러오는 거는 참고 1~5장 노트북 참고
-
-# 질문사항 
-### 1. GMM이상점 
-### 2.부등식이 있는 최적화(KKT)
+Numerical Methods in Python 3
+Scientific Computing with Python 3
 
 # url
 [Advanced R](http://www.listendata.com/p/r-programming-tutorials.html)
@@ -53,3 +27,9 @@ git clone https://github.com/alexsosn/MarslandMLAlgo.git
 [pandas](https://github.com/ghk829/100-pandas-puzzles/blob/master/100-pandas-puzzles.ipynb) github clone해도 됨!
 
 [numerical](http://www.waxworksmath.com/Authors/G_M/Kiusalaas/NMIEW_Python/kiusalaas.html)
+
+[Deep Learning Repository](https://github.com/ChristosChristofidis/awesome-deep-learning)
+
+CNN,RNN([url](https://hunkim.github.io/ml/))
+cnn : [cnn](https://github.com/smwade/CNN/blob/master/cnn_overview_tensorflow.ipynb)
+rnn : [rnn](https://github.com/dennybritz/tf-rnn)  
