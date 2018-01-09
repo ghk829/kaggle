@@ -1,4 +1,5 @@
 import sys;
+import time;
 class User1:
     attacks = [1,2,3];
     properties = {"name":"KKH","status":0,"energy":0}
@@ -6,8 +7,8 @@ class User1:
     # -1 :막기
     # 0 : 으
     # 1 : 파
-    # 3 : 에너지파 3>>1 그러나,막기로 막을 수 있음
-    # 5 : 원기옥 
+    # 2 : 에너지파 3>>1 그러나,막기로 막을 수 있음
+    # 3 : 원기옥 
     # 기 상태
     strategy = [0,0,1];
     def __init__(self):
@@ -40,8 +41,8 @@ class User2:
     # -1 :막기
     # 0 : 으
     # 1 : 파
-    # 3 : 에너지파 3>>1 그러나,막기로 막을 수 있음
-    # 5 : 원기옥 
+    # 2 : 에너지파 3>>1 그러나,막기로 막을 수 있음
+    # 3 : 원기옥 
     # 기 상태
     strategy = [0,0,1,0];
     def __init__(self):
@@ -80,6 +81,7 @@ i = 0;
 while(flag):
     user1.next_step(i);
     user2.next_step(i);
+    print(user1.properties['name']+' : '+str(user1.properties['status'])+' VS '+user2.properties['name']+' : '+str(user2.properties['status']));
     if user1.properties['status'] !=user2.properties['status']:
         if user1.properties['status'] == 3:
             print(user1.properties['name']+" Win!");
@@ -105,3 +107,4 @@ while(flag):
     user1.afterTurn();
     user2.afterTurn();
     i+=1;
+    time.sleep(2);
