@@ -1,3 +1,4 @@
+import sys;
 class User1:
     attacks = [1,2,3];
     properties = {"name":"KKH","status":0,"energy":0}
@@ -8,20 +9,25 @@ class User1:
     # 3 : 에너지파 3>>1 그러나,막기로 막을 수 있음
     # 5 : 원기옥 
     # 기 상태
-    strategy = [0,0,1,0,0,0,0,0];
+    strategy = [0,0,1];
     def __init__(self):
         pass
     def next_step(self,step):
         # 정의해야 할 Method
-        self.properties['status'] = self.strategy[step]
-        if self.properties['status'] == 0:
-            self.properties['energy']+=1;
-        elif self.properties['status'] in self.attacks:
-            if self.properties['energy'] < self.properties['status']:
-                self.properties['status'] = 0;
+        # 아래 코드는 건들지 말 것
+        try:
+            self.properties['status'] = self.strategy[step]
+            if self.properties['status'] == 0:
                 self.properties['energy']+=1;
-            else:
-                self.properties['energy']-=self.properties['status'];
+            elif self.properties['status'] in self.attacks:
+                if self.properties['energy'] < self.properties['status']:
+                    self.properties['status'] = 0;
+                    self.properties['energy']+=1;
+                else:
+                    self.properties['energy']-=self.properties['status'];
+        except:
+            print(self.properties['name']+"Lose!");
+            sys.exit();
     def setOther(self,other):
         self.otherProperties = other.old_properties
     def afterTurn(self):
@@ -37,20 +43,25 @@ class User2:
     # 3 : 에너지파 3>>1 그러나,막기로 막을 수 있음
     # 5 : 원기옥 
     # 기 상태
-    strategy = [0,0,0,3,0,0,0,0];
+    strategy = [0,0,1,0];
     def __init__(self):
         pass
     def next_step(self,step):
         # 정의해야 할 Method
-        self.properties['status'] = self.strategy[step]
-        if self.properties['status'] == 0:
-            self.properties['energy']+=1;
-        elif self.properties['status'] in self.attacks:
-            if self.properties['energy'] < self.properties['status']:
-                self.properties['status'] = 0;
+        # 아래 코드는 건들지 말 것
+        try:
+            self.properties['status'] = self.strategy[step]
+            if self.properties['status'] == 0:
                 self.properties['energy']+=1;
-            else:
-                self.properties['energy']-=self.properties['status'];
+            elif self.properties['status'] in self.attacks:
+                if self.properties['energy'] < self.properties['status']:
+                    self.properties['status'] = 0;
+                    self.properties['energy']+=1;
+                else:
+                    self.properties['energy']-=self.properties['status'];
+        except:
+            print(self.properties['name']+"Lose!");
+            sys.exit();
     def setOther(self,other):
         self.otherProperties = other.old_properties
     def afterTurn(self):
@@ -63,8 +74,10 @@ user1.setOther(user2);
 user2.setOther(user1);
 
 # main
+flag = True;
 attacks = [1,2,3];
-for i in range(10):
+i = 0;
+while(flag):
     user1.next_step(i);
     user2.next_step(i);
     if user1.properties['status'] !=user2.properties['status']:
@@ -91,3 +104,4 @@ for i in range(10):
                 break;
     user1.afterTurn();
     user2.afterTurn();
+    i+=1;
