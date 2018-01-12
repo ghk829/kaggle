@@ -2,21 +2,69 @@ import sys;
 import time;
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt;
+import numpy as np;
 class User1:
     attacks = [1,2,3];
     properties = {"name":"근화","status":0,"energy":0}
     old_properties = {"name":"KKH","status":0,"energy":0}
+    probabilities = {-1:0.2,0:0.2,1:0.2,2:0.2,3:0.2};
     # -1 :막기
     # 0 : 으
     # 1 : 파
     # 2 : 에너지파 3>>1 그러나,막기로 막을 수 있음
     # 3 : 원기옥 
     # 기 상태
-    strategy = [0,0,0,3,0,-1,1];
+    strategy = [];
     def __init__(self):
         pass
     def next_step(self,step):
         # 정의해야 할 Method
+        global i;
+        if self.otherProperties['energy'] == 0:
+              self.probabilities[0] = 1;
+              for key in self.probabilities.keys():
+                  if key != 0:
+                      self.probabilities[key] = 0;
+        if self.properties['energy'] == 1:
+            self.probabilities[2] = 0;
+            self.probabilities[3] = 0;
+            l = 0
+            for key in self.probabilities:
+                if self.probabilities[key] != 0:
+                    l+=1;
+            prob = 1.0/l
+            for key in self.probabilities:
+                if self.probabilities[key] != 0:
+                    self.probabilities[key] = prob;
+        if self.properties['energy'] == 2:
+            self.probabilities[3] = 0;
+            l = 0
+            for key in self.probabilities:
+                if self.probabilities[key] != 0:
+                    l+=1;
+            prob = 1.0/l
+            for key in self.probabilities:
+                if self.probabilities[key] != 0:
+                    self.probabilities[key] = prob;
+        if self.properties['energy'] == 3:
+             self.probabilities[3] = 1;
+             for key in self.probabilities.keys():
+                 if key != 3:
+                     self.probabilities[key] = 0;
+        sample_choice = np.random.choice(list(self.probabilities.keys()),p=list(self.probabilities.values()));
+        flag = False;
+        for key in self.probabilities:
+            if self.probabilities[key] == 1.0:
+                flag = True;
+                break;
+        if flag:
+            for key in self.probabilities:
+                self.probabilities[key] =0.2;
+        if (i+1) > len(self.strategy):
+            self.strategy.append(sample_choice);
+        else:
+            self.strategy[i] = sample_choice;
+        
         # 아래 코드는 건들지 말 것
         try:
             self.properties['status'] = self.strategy[step]
@@ -28,7 +76,6 @@ class User1:
                     self.properties['energy']+=1;
                 else:
                     self.properties['energy']-=self.properties['status'];
-            self.display_status(self.properties['status']);
         except:
             print(self.properties['name']+"Lose!");
             sys.exit();
@@ -37,19 +84,6 @@ class User1:
     def afterTurn(self):
         for i in self.old_properties:
             self.old_properties[i] = self.properties[i];
-    def display_status(self,status):
-        if status == 0:
-            img = mpimg.imread("user1_0.jpg")
-        elif status ==1:
-            img = mpimg.imread("user1_1.jpg")
-        elif status ==-1:
-            img = mpimg.imread("user1_-1.jpg")
-        elif status ==2:
-            img = mpimg.imread("user1_2.jpg")
-        else:
-            img = mpimg.imread("user1_3.jpg")
-        plt.imshow(img);
-        plt.show();
     def show_status(self):
         status =  self.properties['status']
         if status == 0:
@@ -91,7 +125,6 @@ class User2:
                     self.properties['energy']+=1;
                 else:
                     self.properties['energy']-=self.properties['status'];
-            self.display_status(self.properties['status']);
         except:
             print(self.properties['name']+"Lose!");
             sys.exit();
@@ -100,19 +133,6 @@ class User2:
     def afterTurn(self):
         for i in self.old_properties:
             self.old_properties[i] = self.properties[i];
-    def display_status(self,status):
-        if status == 0:
-            img = mpimg.imread("user2_0.jpg")
-        elif status ==1:
-            img = mpimg.imread("user2_1.jpg")
-        elif status ==-1:
-            img = mpimg.imread("user2_-1.jpg")
-        elif status ==2:
-            img = mpimg.imread("user2_2.jpg")
-        else:
-            img = mpimg.imread("user2_3.jpg")
-        plt.imshow(img);
-        plt.show();
     def show_status(self):
         status =  self.properties['status']
         if status == 0:
@@ -148,9 +168,10 @@ if __name__ == "__main__":
         if user1.properties['status'] !=user2.properties['status']:
             if user1.properties['status'] == 3:
                 print(user1.properties['name']+" Win!");
+                break;
             elif user2.properties['status'] ==3:
                 print(user2.properties['name']+" Win!")
-                
+                break;
             if(user1.properties['status'] in attacks)and(user2.properties['status'] in attacks):
                 if user1.properties['status'] < user2.properties['status']:
                     print(user2.properties['name']+" Win!");
@@ -170,4 +191,3 @@ if __name__ == "__main__":
         user1.afterTurn();
         user2.afterTurn();
         i+=1;
-        _ = input("Press [enter] to continue.")
