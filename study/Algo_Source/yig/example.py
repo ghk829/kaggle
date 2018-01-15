@@ -1,4 +1,4 @@
-class User1:
+class User2:
     attacks = [1,2,3];
     properties = {"name":"일근","status":0,"energy":0}
     old_properties = {"name":"YIG","status":0,"energy":0}
