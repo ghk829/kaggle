@@ -2,6 +2,7 @@ import pygame
 import time
 import random
 import sys 
+
 pygame.init()
  
 display_width = 800
@@ -23,9 +24,11 @@ clock = pygame.time.Clock()
 
 
 user1_image = pygame.image.load('user1_0.jpg')
-user2_image = pygame.image.load('user2_0.jpg')
+user2_image = pygame.image.load('user1_0.jpg')
 user1_image = pygame.transform.scale(user1_image, (200, 250))
 user2_image = pygame.transform.scale(user2_image, (200, 250))
+user1_image = pygame.transform.flip(user1_image, 1, 0)
+user2_image = pygame.transform.flip(user1_image, 1, 0)
 
 def display():
     attacks = [1,2,3];
@@ -37,7 +40,7 @@ def display():
         gameDisplay.blit(user1_image,(x1,y1))
         gameDisplay.blit(user2_image,(x2,y2))
         global i;
-        SmallText = pygame.font.Font('HUDaku.ttf',30)
+        SmallText = pygame.font.Font('NanumGothic.ttf',30)
         text1 = user1.properties['name']+' : '+user1.show_status()+' VS '+user2.properties['name']+' : '+user2.show_status()
         TextSurf1, TextRect1 = text_objects(text1, SmallText)
         TextRect1.center = ((display_width/2),(display_height/2-200))
@@ -156,7 +159,7 @@ class User1:
         elif status == 2:
             return "에너지파!"
         else:
-            return "원기옥"
+            return "원기옥!"
         
     def show_energy(self):
         return str(self.properties['energy'])
@@ -198,15 +201,17 @@ class User2:
     def display_status(self,status):
         global user2_image;
         if status == 0:
-            user2_image = pygame.image.load("user2_0.jpg")
+            user2_image = pygame.image.load("user1_0.jpg")
+            
         elif status ==1:
-            user2_image = pygame.image.load("user2_1.jpg")
+            user2_image = pygame.image.load("user1_1.jpg")
         elif status ==-1:
-            user2_image = pygame.image.load("user2_-1.jpg")
+            user2_image = pygame.image.load("user1_-1.jpg")
         elif status ==2:
-            user2_image = pygame.image.load("user2_2.jpg")
+            user2_image = pygame.image.load("user1_2.jpg")
         else:
-            user2_image = pygame.image.load("user2_3.jpg")
+            user2_image = pygame.image.load("user1_3.jpg")
+        user2_image = pygame.transform.flip(user1_image, 1, 0)
         user2_image = pygame.transform.scale(user2_image, (200, 250))
     def show_status(self):
         status =  self.properties['status']
