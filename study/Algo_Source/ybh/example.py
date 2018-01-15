@@ -14,17 +14,18 @@ class User1:
     def next_step(self,step):
         # 정의해야 할 Method
         # 아래 코드는 건들지 말 것
-        if user1.properties['energy'] == 0
-            self.step = 0
-        elif user1.properties['energy'] > user2.properties['energy']:
-            self.step = 0
-        elif user1.properties['energy'] == user2.properties['energy']:
-            self.step = 1
-        else :
-            self.step = -1
-        self.strategy.append[self.step]
-            
         try:
+            if self.properties['energy'] == 0:
+                self.step = 0
+            elif self.properties['energy'] == 3:
+                self.step = 3
+            elif self.properties['energy'] > self.otherProperties['energy']:
+                self.step = 0
+            elif self.properties['energy'] == self.otherProperties['energy']:
+                self.step = 1
+            else :
+                self.step = -1
+            self.strategy.append(self.step)
             self.properties['status'] = self.strategy[step]
             if self.properties['status'] == 0:
                 self.properties['energy']+=1;
