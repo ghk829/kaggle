@@ -1,19 +1,27 @@
 # 공부계획  
+## 연습문제 풀이는 각자... 시간이 없어용 ㅠㅠ
 ~1/8 : Scientific Computing with Python 3 : CH 1,2,3 && Numerical Methods in Python 3 : CH 1
 
 ~1/15 : Scientific Computing with Python 3 : CH 4,5,6,7,8,9,10,11
 
-~1/22 : Numerical Methods in Python 3 : CH2
+~2/5 : Numerical Methods in Python 3 : CH2
 
-## 스케쥴에 따라... 아직 미확정
+~2/12 : Numerical Methods in Python 3 : CH3(p59~103)
 
-~1/29 : Numerical Methods in Python 3 : CH3, CH4
+~2/19 : Numerical Methods in Python 3 : CH4 
 
-~2/5 : Numerical Methods in Python 3 : CH5, CH6 
+~2/26 : Numerical Methods in Python 3 : CH5
 
-~2/12 : Numerical Methods in Python 3 : CH7, CH8
+~3/5 : Numerical Methods in Python 3 : CH6
 
-~2/19 : Numerical Methods in Python 3 : CH9, CH10
+~3/12 : Numerical Methods in Python 3 : CH7
+
+~3/19 : Numerical Methods in Python 3 : CH8
+
+~3/26 : Numerical Methods in Python 3 : CH9
+
+~4/2 : Numerical Methods in Python 3 : CH10
+
 ## 추후 일정은 기본을 익힌 후에...
 # 도서
 Numerical Methods in Python 3
