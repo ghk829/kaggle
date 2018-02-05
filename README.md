@@ -48,3 +48,6 @@ Scientific Computing with Python 3
 CNN,RNN([url](https://hunkim.github.io/ml/))
 cnn : [cnn](https://github.com/smwade/CNN/blob/master/cnn_overview_tensorflow.ipynb)
 rnn : [rnn](https://github.com/dennybritz/tf-rnn)  
+
+
+[강화학습](https://dnddnjs.gitbooks.io/rl/content/)
