@@ -25,6 +25,7 @@ def newtonRaphson2(f,x,tol=1.0e-9):
     for i in range(30):
         jac,f0 = jacobian(f,x)
         if math.sqrt(np.dot(f0,f0)/len(x)) < tol:
+            print(x)
             return x
         dx = gaussPivot(jac,-f0)
         x = x + dx

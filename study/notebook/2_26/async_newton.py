@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 25 14:25:14 2018
+
+@author: 80504
+"""
+
 import sys
 sys.path.append('C:/Users/80504/study/git/kaggle/study/NM_Source') 
 from multiprocessing import Process
@@ -6,9 +13,9 @@ from gaussPivot import *
 import math
 from multiprocessing import Pool
 import multiprocessing
+import time
 #override
 def newtonRaphson(x,tol=1.0e-9):
-    print("X is",x)
     def f(x):
         return x*x-1
     
@@ -29,7 +36,6 @@ def newtonRaphson(x,tol=1.0e-9):
         jac,f0 = jacobian(f,x)
         if math.sqrt(np.dot(f0,f0)/len(x)) < tol:
             print(x)
-            return x
         dx = gaussPivot(jac,-f0)
         x = x + dx
         if math.sqrt(np.dot(dx,dx)) < tol*max(max(abs(x)),1.0): return x
@@ -38,8 +44,10 @@ def newtonRaphson(x,tol=1.0e-9):
  
 if __name__ == '__main__':
     print("The Number of Core is",multiprocessing.cpu_count())
+    start_time = time.time()
     numbers = [];
-    for elem in range(-10,10):
+    for elem in range(-1000,1000):
         numbers.append(np.array([1.0*elem]))
     pool =  Pool(processes=4)
     pool.map(newtonRaphson,numbers)
+    print("The DT is",time.time()-start_time) 
