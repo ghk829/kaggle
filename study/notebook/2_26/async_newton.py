@@ -48,6 +48,6 @@ if __name__ == '__main__':
     numbers = [];
     for elem in range(-1000,1000):
         numbers.append(np.array([1.0*elem]))
-    pool =  Pool(processes=4)
+    pool =  Pool(processes=multiprocessing.cpu_count())
     pool.map(newtonRaphson,numbers)
     print("The DT is",time.time()-start_time) 
